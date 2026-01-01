@@ -1,0 +1,4 @@
+User-agent: *
+Disallow:
+
+Sitemap: https://aukatimi.is/sitemap.xml
