@@ -159,7 +159,36 @@
         .price-val { text-align: right; font-weight: 700; color: var(--primary); white-space: nowrap; }
         .sub-label { display: block; font-size: 0.75rem; color: #94a3b8; }
 
-        footer { margin-top: 80px; padding: 40px; text-align: center; border-top: 1px solid #e2e8f0; color: #94a3b8; font-size: 0.85rem; }
+        /* Invite section for other tutors */
+        .invite-card {
+            margin-top: 70px;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-left: 4px solid var(--accent);
+            border-radius: 16px;
+            padding: 30px 35px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+        }
+        .invite-card h2 {
+            margin: 0 0 10px 0;
+            font-size: 1.35rem;
+            color: var(--primary);
+        }
+        .invite-card p {
+            margin: 0;
+            color: #475569;
+            font-size: 1rem;
+        }
+        .invite-card a {
+            color: var(--accent);
+            font-weight: 600;
+            text-decoration: none;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.35);
+            transition: border-color 0.15s ease;
+        }
+        .invite-card a:hover { border-bottom-color: var(--accent); }
+
+        footer { margin-top: 60px; padding: 40px; text-align: center; border-top: 1px solid #e2e8f0; color: #94a3b8; font-size: 0.85rem; }
 
         @media (max-width: 900px) {
             .main-grid { grid-template-columns: 1fr; }
@@ -232,6 +261,11 @@
             </div>
         </aside>
     </div>
+
+    <section class="invite-card" aria-label="Fyrir aðra kennara">
+        <h2>Langar þig að birtast á þessari síðu?</h2>
+        <p>Ert þú að kenna aukatíma og langar að bæta við þig nemendum? Endilega <a href="mailto:katrintinnas@gmail.com?subject=Aukat%C3%ADmakennari">sendu mér skilaboð</a>!</p>
+    </section>
 </div>
 
 <footer>
