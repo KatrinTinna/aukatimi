@@ -1,23 +1,76 @@
 <!DOCTYPE html>
 <html lang="is">
 <head>
-    <meta name="description" content="Aukatímar í stærðfræði og forritun í Hafnarfirði. Einkakennsla fyrir grunnskóla og framhaldsskóla. Hafðu samband í síma 772 1404 eða á netfang." />
-<link rel="canonical" href="https://aukatimi.is/" />
-
-<!-- Open Graph (deilist vel á Facebook/Discord o.fl.) -->
-<meta property="og:type" content="website" />
-<meta property="og:locale" content="is_IS" />
-<meta property="og:title" content="Einkatími í stærðfræði og forritun | Hafnarfjörður" />
-<meta property="og:description" content="Einkakennsla fyrir grunnskóla og framhaldsskóla. Hafðu samband í síma 772 1404." />
-<meta property="og:url" content="https://aukatimi.is/" />
-<meta property="og:image" content="https://aukatimi.is/profile_pic.jpg" />
-
-<!-- Twitter preview -->
-<meta name="twitter:card" content="summary_large_image" />
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aukatímar í stærðfræði | Hafnarfjörður</title>
+    <title>Aukatímar í stærðfræði og forritun | Hafnarfjörður</title>
+    <meta name="description" content="Aukatímar í stærðfræði og forritun í Hafnarfirði. Einkakennsla fyrir grunnskóla og framhaldsskóla. Hafðu samband í síma 772 1404 eða á netfang." />
+    <meta name="theme-color" content="#3b82f6" />
+    <link rel="canonical" href="https://aukatimi.is/" />
+
+    <!-- Open Graph (deilist vel á Facebook/Discord o.fl.) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="is_IS" />
+    <meta property="og:title" content="Aukatímar í stærðfræði og forritun | Hafnarfjörður" />
+    <meta property="og:description" content="Einkakennsla fyrir grunnskóla og framhaldsskóla. Hafðu samband í síma 772 1404." />
+    <meta property="og:url" content="https://aukatimi.is/" />
+    <meta property="og:image" content="https://aukatimi.is/profile_pic.jpg" />
+    <meta property="og:image:alt" content="Katrín Tinna - einkakennari í stærðfræði og forritun í Hafnarfirði" />
+
+    <!-- Twitter preview -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Aukatímar í stærðfræði og forritun | Hafnarfjörður" />
+    <meta name="twitter:description" content="Einkakennsla fyrir grunnskóla og framhaldsskóla. Hafðu samband í síma 772 1404." />
+    <meta name="twitter:image" content="https://aukatimi.is/profile_pic.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <!-- Structured data: LocalBusiness + Person -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "LocalBusiness",
+          "@id": "https://aukatimi.is/#business",
+          "name": "Aukatímar - Einkakennsla í stærðfræði og forritun",
+          "description": "Einkakennsla í stærðfræði og forritun fyrir grunnskóla- og framhaldsskólanema í Hafnarfirði.",
+          "url": "https://aukatimi.is/",
+          "telephone": "+354-772-1404",
+          "email": "katrintinnas@gmail.com",
+          "image": "https://aukatimi.is/profile_pic.jpg",
+          "priceRange": "4.500 kr. - 7.000 kr.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Hafnarfjörður",
+            "addressCountry": "IS"
+          },
+          "areaServed": {
+            "@type": "City",
+            "name": "Hafnarfjörður"
+          },
+          "provider": { "@id": "https://aukatimi.is/#person" }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://aukatimi.is/#person",
+          "name": "Katrín Tinna",
+          "jobTitle": "Einkakennari í stærðfræði og forritun",
+          "image": "https://aukatimi.is/profile_pic.jpg",
+          "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Verzlunarskóli Íslands"
+          },
+          "affiliation": {
+            "@type": "CollegeOrUniversity",
+            "name": "Háskólinn í Reykjavík"
+          }
+        }
+      ]
+    }
+    </script>
     <style>
         :root {
             --primary: #0f172a;
@@ -99,7 +152,7 @@
 
         /* Verðskrá Hægra megin */
         .price-card { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); margin-bottom: 25px; }
-        .price-header { background-color: var(--price-bg); color: var(--price-text); padding: 12px 20px; font-weight: 700; margin: 0; }
+        .price-header { background-color: var(--price-bg); color: var(--price-text); padding: 12px 20px; font-weight: 700; margin: 0; font-size: 1rem; }
         table { width: 100%; border-collapse: collapse; }
         td { padding: 15px 20px; border-bottom: 1px solid #f1f5f9; }
         .price-val { text-align: right; font-weight: 700; color: var(--primary); white-space: nowrap; }
@@ -127,7 +180,7 @@
     <div class="main-grid">
         <div class="profile-section">
             <div class="about-header">
-                <img src="profile_pic.jpg" alt="Einkakennari í stærðfræði í Hafnarfirði - Katrín Tinna" class="profile-img">
+                <img src="profile_pic.jpg" alt="Einkakennari í stærðfræði í Hafnarfirði - Katrín Tinna" class="profile-img" width="220" height="220" fetchpriority="high">
                 <div class="about-text">
                     <h2>Um mig</h2>
                     <p>Ég er 21 árs nemi á þriðja ári í Hugbúnaðarverkfræði í HR. Ég útskrifaðist af eðlisfræðilínu í Verzlunarskóla Íslands 2023 og hef verið að kenna aukatíma síðan.</p>
@@ -150,7 +203,7 @@
 
         <aside>
             <div class="price-card">
-                <p class="price-header">Verðskrá fyrir framhaldsskóla </p>
+                <h2 class="price-header">Verðskrá fyrir framhaldsskóla</h2>
                 <table>
                     <tr>
                         <td>Einstaklingur<br><span class="sub-label">Verð fyrir 60 mínútur.</span></td>
@@ -164,7 +217,7 @@
             </div>
 
             <div class="price-card">
-                <p class="price-header">Verðskrá fyrir grunnskóla</p>
+                <h2 class="price-header">Verðskrá fyrir grunnskóla</h2>
                 <table>
                     <tr>
                         <td>Einstaklingur<br><span class="sub-label">Verð fyrir 60 mínútur.</span></td>
