@@ -52,7 +52,10 @@
             "@type": "City",
             "name": "Hafnarfjörður"
           },
-          "provider": { "@id": "https://aukatimi.is/#person" }
+          "provider": [
+            { "@id": "https://aukatimi.is/#person" },
+            { "@id": "https://aukatimi.is/#dilja" }
+          ]
         },
         {
           "@type": "Person",
@@ -60,13 +63,36 @@
           "name": "Katrín Tinna",
           "jobTitle": "Einkakennari í stærðfræði og forritun",
           "image": "https://aukatimi.is/profile_pic.jpg",
-          "alumniOf": {
-            "@type": "EducationalOrganization",
-            "name": "Verzlunarskóli Íslands"
-          },
-          "affiliation": {
-            "@type": "CollegeOrUniversity",
-            "name": "Háskólinn í Reykjavík"
+          "alumniOf": [
+            {
+              "@type": "EducationalOrganization",
+              "name": "Verzlunarskóli Íslands"
+            },
+            {
+              "@type": "CollegeOrUniversity",
+              "name": "Háskólinn í Reykjavík"
+            }
+          ],
+          "hasCredential": {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "BSc",
+            "educationalLevel": "Bachelor",
+            "about": "Hugbúnaðarverkfræði"
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://aukatimi.is/#dilja",
+          "name": "Diljá Sigurðardóttir",
+          "jobTitle": "Einkakennari í stærðfræði og forritun",
+          "image": "https://aukatimi.is/dilja.jpg",
+          "telephone": "+354-661-3136",
+          "email": "diljasigurdar@icloud.com",
+          "hasCredential": {
+            "@type": "EducationalOccupationalCredential",
+            "credentialCategory": "BSc",
+            "educationalLevel": "Bachelor",
+            "about": "Tölvunarfræði"
           }
         }
       ]
@@ -234,6 +260,12 @@
         }
         .invite-card a:hover { border-bottom-color: var(--accent); }
 
+        .teacher + .teacher {
+            margin-top: 70px;
+            padding-top: 60px;
+            border-top: 1px solid #e2e8f0;
+        }
+
         footer { margin-top: 60px; padding: 40px; text-align: center; border-top: 1px solid #e2e8f0; color: #94a3b8; font-size: 0.85rem; }
 
         @media (max-width: 900px) {
@@ -258,13 +290,14 @@
         <span class="online-note" data-i18n="onlineNote">💻 Kenni líka á netinu</span>
     </header>
 
+    <section class="teacher">
     <div class="main-grid">
         <div class="profile-section">
             <div class="about-header">
                 <img src="profile_pic.jpg" alt="Einkakennari í stærðfræði í Hafnarfirði - Katrín Tinna" class="profile-img" width="220" height="220" fetchpriority="high">
                 <div class="about-text">
-                    <h2 data-i18n="aboutHeading">Um mig</h2>
-                    <p data-i18n="aboutP1">Ég er 22 árs nemi á þriðja ári í Hugbúnaðarverkfræði í HR. Ég útskrifaðist af eðlisfræðilínu í Verzlunarskóla Íslands 2023 og hef verið að kenna aukatíma síðan.</p>
+                    <h2 data-i18n="katrinName">Katrín Tinna</h2>
+                    <p data-i18n="aboutP1">Ég er 22 ára og útskrifaðist með BSc. í hugbúnaðarverkfræði vorið 2026. Ég lauk stúdentsprófi af eðlisfræðilínu í Verzlunarskóla Íslands 2023 og hef verið að kenna aukatíma í stærðfræði síðan.</p>
                     <p data-i18n="aboutP2">Ég hef einnig verið dæmatímakennari í háskólanum í mismunandi stærðfræði- og forritunaráföngum. Ég er þolinmóð og legg upp úr því að nemendur skilji það sem verið er að fara yfir.</p>
                 </div>
             </div>
@@ -312,6 +345,65 @@
             </div>
         </aside>
     </div>
+    </section>
+
+    <section class="teacher">
+    <div class="main-grid">
+        <div class="profile-section">
+            <div class="about-header">
+                <img src="dilja.jpg" alt="Einkakennari í stærðfræði og forritun í Hafnarfirði - Diljá Sigurðardóttir" class="profile-img" width="220" height="220" loading="lazy">
+                <div class="about-text">
+                    <h2 data-i18n="diljaName">Diljá Sigurðardóttir</h2>
+                    <p data-i18n="diljaP1">Ég er 26 ára og lauk BSc-prófi í tölvunarfræði árið 2022. Ég hef reynslu af dæmatímakennslu í ýmsum tölvunarfræðiáföngum á háskólastigi, svo sem forritun, forritunarmálum og hönnun og smíði hugbúnaðar, auk stærðfræði.</p>
+                    <p data-i18n="diljaP2">Ég tek að mér aukatíma í stærðfræði fyrir grunnskóla- og framhaldsskólanema, auk þess að aðstoða háskólanema í tölvunarfræði- og forritunaráföngum.</p>
+                    <p data-i18n="diljaP3">Ég er þolinmóð og legg mikla áherslu á að útskýra námsefnið á einfaldan og skýran hátt svo að nemendur skilji vel það sem verið er að fara yfir. Ég aðlaga kennsluna að þörfum hvers nemanda.</p>
+                </div>
+            </div>
+
+            <div class="contact-box">
+                <h3 data-i18n="contactHeading">Hafðu samband!</h3>
+                <div style="margin-bottom: 15px;">
+                    <span class="contact-label" data-i18n="phoneLabel">Sími</span>
+                    <a href="tel:6613136" class="contact-link">661 3136</a>
+                </div>
+                <div>
+                    <span class="contact-label" data-i18n="emailLabel">Netfang</span>
+                    <a href="mailto:diljasigurdar@icloud.com" class="contact-link">diljasigurdar@icloud.com</a>
+                </div>
+            </div>
+        </div>
+
+        <aside>
+            <div class="price-card">
+                <h2 class="price-header" data-i18n="pricingHs">Verðskrá fyrir framhaldsskóla</h2>
+                <table>
+                    <tr>
+                        <td><span data-i18n="individual">Einstaklingur</span><br><span class="sub-label" data-i18n="pricePer60">Verð fyrir 60 mínútur.</span></td>
+                        <td class="price-val">7.000 kr.</td>
+                    </tr>
+                    <tr>
+                        <td><span data-i18n="twoTogether">Tveir saman</span><br><span class="sub-label" data-i18n="pricePerPerson60">Verð á mann fyrir 60 mínútur.</span></td>
+                        <td class="price-val">5.500 kr.</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="price-card">
+                <h2 class="price-header" data-i18n="pricingEs">Verðskrá fyrir grunnskóla</h2>
+                <table>
+                    <tr>
+                        <td><span data-i18n="individual">Einstaklingur</span><br><span class="sub-label" data-i18n="pricePer60">Verð fyrir 60 mínútur.</span></td>
+                        <td class="price-val">6.000 kr.</td>
+                    </tr>
+                    <tr>
+                        <td><span data-i18n="twoTogether">Tveir saman</span><br><span class="sub-label" data-i18n="pricePerPerson60">Verð á mann fyrir 60 mínútur.</span></td>
+                        <td class="price-val">4.500 kr.</td>
+                    </tr>
+                </table>
+            </div>
+        </aside>
+    </div>
+    </section>
 
     <section class="invite-card" aria-label="Fyrir aðra kennara">
         <h2 data-i18n="inviteHeading">Langar þig að birtast á þessari síðu?</h2>
@@ -331,8 +423,12 @@
             onlineNote: "💻 Kenni líka á netinu",
             h1: "Aukatímar í stærðfræði og forritun",
             subtitle: "Einkakennsla fyrir framhaldsskóla- og grunnskólanema.",
-            aboutHeading: "Um mig",
-            aboutP1: "Ég er 22 árs nemi á þriðja ári í Hugbúnaðarverkfræði í HR. Ég útskrifaðist af eðlisfræðilínu í Verzlunarskóla Íslands 2023 og hef verið að kenna aukatíma síðan.",
+            katrinName: "Katrín Tinna",
+            diljaName: "Diljá Sigurðardóttir",
+            diljaP1: "Ég er 26 ára og lauk BSc-prófi í tölvunarfræði árið 2022. Ég hef reynslu af dæmatímakennslu í ýmsum tölvunarfræðiáföngum á háskólastigi, svo sem forritun, forritunarmálum og hönnun og smíði hugbúnaðar, auk stærðfræði.",
+            diljaP2: "Ég tek að mér aukatíma í stærðfræði fyrir grunnskóla- og framhaldsskólanema, auk þess að aðstoða háskólanema í tölvunarfræði- og forritunaráföngum.",
+            diljaP3: "Ég er þolinmóð og legg mikla áherslu á að útskýra námsefnið á einfaldan og skýran hátt svo að nemendur skilji vel það sem verið er að fara yfir. Ég aðlaga kennsluna að þörfum hvers nemanda.",
+            aboutP1: "Ég er 22 ára og útskrifaðist með BSc. í hugbúnaðarverkfræði vorið 2026. Ég lauk stúdentsprófi af eðlisfræðilínu í Verzlunarskóla Íslands 2023 og hef verið að kenna aukatíma í stærðfræði síðan.",
             aboutP2: "Ég hef einnig verið dæmatímakennari í háskólanum í mismunandi stærðfræði- og forritunaráföngum. Ég er þolinmóð og legg upp úr því að nemendur skilji það sem verið er að fara yfir.",
             contactHeading: "Hafðu samband!",
             phoneLabel: "Sími",
@@ -355,8 +451,12 @@
             onlineNote: "💻 I also teach online",
             h1: "Math and Programming Tutoring",
             subtitle: "Private tutoring for upper-secondary and elementary school students.",
-            aboutHeading: "About me",
-            aboutP1: "I'm a 22-year-old third-year Software Engineering student at Reykjavík University. I graduated from the physics and science program at Verzlunarskóli Íslands in 2023 and have been tutoring ever since.",
+            katrinName: "Katrín Tinna",
+            diljaName: "Diljá Sigurðardóttir",
+            diljaP1: "I'm 26 years old and completed a BSc in Computer Science in 2022. I have experience as a teaching assistant in various university-level computer science courses, such as programming, programming languages, and software design and construction, as well as mathematics.",
+            diljaP2: "I tutor mathematics for elementary and upper-secondary school students, and I also help university students with computer science and programming courses.",
+            diljaP3: "I'm patient and place great emphasis on explaining the material in a simple and clear way so that students really understand what we go over. I adapt my teaching to each student's needs.",
+            aboutP1: "I'm 22 years old and graduated with a BSc in Software Engineering in spring 2026. I finished upper-secondary school on the physics track at Verzlunarskóli Íslands in 2023 and have been tutoring mathematics ever since.",
             aboutP2: "I have also been a teaching assistant at the university in various math and programming courses. I'm patient and make sure my students truly understand the material we go over.",
             contactHeading: "Get in touch!",
             phoneLabel: "Phone",
