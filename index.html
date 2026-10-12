@@ -210,6 +210,29 @@
         /* Justified text for "Um mig" section */
         .about-text p { text-align: left; }
 
+        /* Fully booked badge */
+        .booked-note {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #fef3c7;
+            color: #92400e;
+            border: 1px solid #fcd34d;
+            padding: 7px 14px;
+            border-radius: 999px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            margin: 0 0 18px 0;
+        }
+        .booked-note::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #d97706;
+            flex-shrink: 0;
+        }
+
         /* Hafðu Samband Box undir mynd */
         .contact-box {
             background: white;
@@ -297,6 +320,7 @@
                 <img src="profile_pic.jpg" alt="Einkakennari í stærðfræði í Hafnarfirði - Katrín Tinna" class="profile-img" width="220" height="220" fetchpriority="high">
                 <div class="about-text">
                     <h2 data-i18n="katrinName">Katrín Tinna</h2>
+                    <p class="booked-note" data-i18n="bookedNote">Fullbókað í augnablikinu – tek ekki við nýjum nemendum</p>
                     <p data-i18n="aboutP1">Ég er 22 ára og útskrifaðist með BSc. í hugbúnaðarverkfræði vorið 2026. Ég lauk stúdentsprófi af eðlisfræðilínu í Verzlunarskóla Íslands 2023 og hef verið að kenna aukatíma í stærðfræði síðan.</p>
                     <p data-i18n="aboutP2">Ég hef einnig verið dæmatímakennari í háskólanum í mismunandi stærðfræði- og forritunaráföngum. Ég er þolinmóð og legg upp úr því að nemendur skilji það sem verið er að fara yfir.</p>
                 </div>
@@ -424,6 +448,7 @@
             h1: "Aukatímar í stærðfræði og forritun",
             subtitle: "Einkakennsla fyrir framhaldsskóla- og grunnskólanema.",
             katrinName: "Katrín Tinna",
+            bookedNote: "Fullbókað í augnablikinu – tek ekki við nýjum nemendum",
             diljaName: "Diljá Sigurðardóttir",
             diljaP1: "Ég er 26 ára og lauk BSc-prófi í tölvunarfræði árið 2022. Ég hef reynslu af dæmatímakennslu í ýmsum tölvunarfræðiáföngum á háskólastigi, svo sem forritun, forritunarmálum og hönnun og smíði hugbúnaðar, auk stærðfræði.",
             diljaP2: "Ég tek að mér aukatíma í stærðfræði fyrir grunnskóla- og framhaldsskólanema, auk þess að aðstoða háskólanema í tölvunarfræði- og forritunaráföngum.",
@@ -452,6 +477,7 @@
             h1: "Math and Programming Tutoring",
             subtitle: "Private tutoring for upper-secondary and elementary school students.",
             katrinName: "Katrín Tinna",
+            bookedNote: "Fully booked at the moment – not taking new students",
             diljaName: "Diljá Sigurðardóttir",
             diljaP1: "I'm 26 years old and completed a BSc in Computer Science in 2022. I have experience as a teaching assistant in various university-level computer science courses, such as programming, programming languages, and software design and construction, as well as mathematics.",
             diljaP2: "I tutor mathematics for elementary and upper-secondary school students, and I also help university students with computer science and programming courses.",
